@@ -1,2 +1,2 @@
-# SugarLab C++ Boilerplate
-The boilerplate project for games written in SugarLab C++.
+# Missile War C++
+Begun in JS with SugarLab, Missile War turned out to be just a little too heavy for the browser. So, in the interest of not compromising, to make the game we want it to be, SugarLab was ported to C++. As of this writing, the development is ongoing. Now, however, it has reached a point where Missile War can be attempted once again...

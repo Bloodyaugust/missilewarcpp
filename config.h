@@ -5,19 +5,19 @@
 /* #undef HAVE_CXX11 */
 
 /* Name of package */
-#define PACKAGE "sugarlabboilerplate"
+#define PACKAGE "missilewarcpp"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "bug-automake@gnu.org"
+#define PACKAGE_BUGREPORT "greysonrichey@synsugarstudio.com"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "sugarlabboilerplate"
+#define PACKAGE_NAME "missilewarcpp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "sugarlabboilerplate 1.0"
+#define PACKAGE_STRING "missilewarcpp 1.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "sugarlabboilerplate"
+#define PACKAGE_TARNAME "missilewarcpp"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

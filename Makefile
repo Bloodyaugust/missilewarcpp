@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/sugarlabboilerplate
-pkgincludedir = $(includedir)/sugarlabboilerplate
-pkglibdir = $(libdir)/sugarlabboilerplate
-pkglibexecdir = $(libexecdir)/sugarlabboilerplate
+pkgdatadir = $(datadir)/missilewarcpp
+pkgincludedir = $(includedir)/missilewarcpp
+pkglibdir = $(libdir)/missilewarcpp
+pkglibexecdir = $(libexecdir)/missilewarcpp
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -79,7 +79,8 @@ POST_UNINSTALL = :
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in $(dist_doc_DATA) install-sh missing
+	$(srcdir)/config.h.in $(dist_doc_DATA) depcomp install-sh \
+	missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_cxx_compile_stdcxx_11.m4 \
 	$(top_srcdir)/configure.ac
@@ -219,12 +220,12 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/grichey/Code/missilewarcpp/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing autoconf
-AUTOHEADER = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing autoheader
-AUTOMAKE = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing automake-1.14
+AUTOCONF = ${SHELL} /home/grichey/Code/missilewarcpp/missing autoconf
+AUTOHEADER = ${SHELL} /home/grichey/Code/missilewarcpp/missing autoheader
+AUTOMAKE = ${SHELL} /home/grichey/Code/missilewarcpp/missing automake-1.14
 AWK = mawk
 CPPFLAGS = 
 CXX = g++
@@ -247,14 +248,14 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing makeinfo
+MAKEINFO = ${SHELL} /home/grichey/Code/missilewarcpp/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = sugarlabboilerplate
-PACKAGE_BUGREPORT = bug-automake@gnu.org
-PACKAGE_NAME = sugarlabboilerplate
-PACKAGE_STRING = sugarlabboilerplate 1.0
-PACKAGE_TARNAME = sugarlabboilerplate
+PACKAGE = missilewarcpp
+PACKAGE_BUGREPORT = greysonrichey@synsugarstudio.com
+PACKAGE_NAME = missilewarcpp
+PACKAGE_STRING = missilewarcpp 1.0
+PACKAGE_TARNAME = missilewarcpp
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
@@ -262,10 +263,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0
-abs_builddir = /home/grichey/Code/sugarlabcppboilerplate
-abs_srcdir = /home/grichey/Code/sugarlabcppboilerplate
-abs_top_builddir = /home/grichey/Code/sugarlabcppboilerplate
-abs_top_srcdir = /home/grichey/Code/sugarlabcppboilerplate
+abs_builddir = /home/grichey/Code/missilewarcpp
+abs_srcdir = /home/grichey/Code/missilewarcpp
+abs_top_builddir = /home/grichey/Code/missilewarcpp
+abs_top_srcdir = /home/grichey/Code/missilewarcpp
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
@@ -284,7 +285,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/install-sh
+install_sh = ${SHELL} /home/grichey/Code/missilewarcpp/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale

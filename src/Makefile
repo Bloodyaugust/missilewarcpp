@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/sugarlabboilerplate
-pkgincludedir = $(includedir)/sugarlabboilerplate
-pkglibdir = $(libdir)/sugarlabboilerplate
-pkglibexecdir = $(libexecdir)/sugarlabboilerplate
+pkgdatadir = $(datadir)/missilewarcpp
+pkgincludedir = $(includedir)/missilewarcpp
+pkglibdir = $(libdir)/missilewarcpp
+pkglibexecdir = $(libexecdir)/missilewarcpp
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -76,7 +76,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = test$(EXEEXT)
+bin_PROGRAMS = missilewar$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -91,11 +91,12 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_test_OBJECTS = main.$(OBJEXT)
-test_OBJECTS = $(am_test_OBJECTS)
-test_DEPENDENCIES =
-test_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(test_LDFLAGS) \
-	$(LDFLAGS) -o $@
+am_missilewar_OBJECTS = main.$(OBJEXT) gamescene.$(OBJEXT) \
+	menuscene.$(OBJEXT)
+missilewar_OBJECTS = $(am_missilewar_OBJECTS)
+missilewar_DEPENDENCIES =
+missilewar_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+	$(missilewar_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -125,8 +126,8 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(test_SOURCES)
-DIST_SOURCES = $(test_SOURCES)
+SOURCES = $(missilewar_SOURCES)
+DIST_SOURCES = $(missilewar_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -152,12 +153,12 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/grichey/Code/missilewarcpp/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing autoconf
-AUTOHEADER = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing autoheader
-AUTOMAKE = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing automake-1.14
+AUTOCONF = ${SHELL} /home/grichey/Code/missilewarcpp/missing autoconf
+AUTOHEADER = ${SHELL} /home/grichey/Code/missilewarcpp/missing autoheader
+AUTOMAKE = ${SHELL} /home/grichey/Code/missilewarcpp/missing automake-1.14
 AWK = mawk
 CPPFLAGS = 
 CXX = g++
@@ -180,14 +181,14 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/missing makeinfo
+MAKEINFO = ${SHELL} /home/grichey/Code/missilewarcpp/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = sugarlabboilerplate
-PACKAGE_BUGREPORT = bug-automake@gnu.org
-PACKAGE_NAME = sugarlabboilerplate
-PACKAGE_STRING = sugarlabboilerplate 1.0
-PACKAGE_TARNAME = sugarlabboilerplate
+PACKAGE = missilewarcpp
+PACKAGE_BUGREPORT = greysonrichey@synsugarstudio.com
+PACKAGE_NAME = missilewarcpp
+PACKAGE_STRING = missilewarcpp 1.0
+PACKAGE_TARNAME = missilewarcpp
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
@@ -195,10 +196,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0
-abs_builddir = /home/grichey/Code/sugarlabcppboilerplate/src
-abs_srcdir = /home/grichey/Code/sugarlabcppboilerplate/src
-abs_top_builddir = /home/grichey/Code/sugarlabcppboilerplate
-abs_top_srcdir = /home/grichey/Code/sugarlabcppboilerplate
+abs_builddir = /home/grichey/Code/missilewarcpp/src
+abs_srcdir = /home/grichey/Code/missilewarcpp/src
+abs_top_builddir = /home/grichey/Code/missilewarcpp
+abs_top_srcdir = /home/grichey/Code/missilewarcpp
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
@@ -217,7 +218,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/grichey/Code/sugarlabcppboilerplate/install-sh
+install_sh = ${SHELL} /home/grichey/Code/missilewarcpp/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -237,10 +238,10 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-test_SOURCES = main.cpp
-test_LDFLAGS = -pthread
-#test_CPPFLAGS =-I /usr/local/include/
-test_LDADD = -lsugarlab -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lboost_system -lboost_filesystem
+missilewar_SOURCES = main.cpp gamescene.cpp menuscene.cpp
+missilewar_LDFLAGS = -pthread
+#missilewar_CPPFLAGS =-I /usr/local/include/
+missilewar_LDADD = -lsugarlab -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lboost_system -lboost_filesystem
 all: all-am
 
 .SUFFIXES:
@@ -318,9 +319,9 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
-test$(EXEEXT): $(test_OBJECTS) $(test_DEPENDENCIES) $(EXTRA_test_DEPENDENCIES) 
-	@rm -f test$(EXEEXT)
-	$(AM_V_CXXLD)$(test_LINK) $(test_OBJECTS) $(test_LDADD) $(LIBS)
+missilewar$(EXEEXT): $(missilewar_OBJECTS) $(missilewar_DEPENDENCIES) $(EXTRA_missilewar_DEPENDENCIES) 
+	@rm -f missilewar$(EXEEXT)
+	$(AM_V_CXXLD)$(missilewar_LINK) $(missilewar_OBJECTS) $(missilewar_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -328,7 +329,9 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/gamescene.Po
 include ./$(DEPDIR)/main.Po
+include ./$(DEPDIR)/menuscene.Po
 
 .cpp.o:
 	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
